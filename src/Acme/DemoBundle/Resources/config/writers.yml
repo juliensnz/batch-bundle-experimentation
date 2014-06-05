@@ -1,0 +1,8 @@
+parameters:
+    acme_demo.writer.doctrine.class: Acme\DemoBundle\Writer\Writer
+
+services:
+    acme_demo.writer.doctrine:
+        class: %acme_demo.writer.doctrine.class%
+        arguments:
+            - '@acme_demo.doctrine.smart_manager_registry'

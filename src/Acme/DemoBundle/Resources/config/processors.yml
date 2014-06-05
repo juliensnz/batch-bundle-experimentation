@@ -1,0 +1,13 @@
+parameters:
+    acme_demo.processor.contact.class: Acme\DemoBundle\Processor\ContactProcessor
+    acme_demo.processor.friend.class: Acme\DemoBundle\Processor\FriendProcessor
+
+services:
+    acme_demo.processor.contact:
+        class: %acme_demo.processor.contact.class%
+        arguments:
+            - @doctrine.orm.entity_manager
+    acme_demo.processor.friend:
+        class: %acme_demo.processor.friend.class%
+        arguments:
+            - @doctrine.orm.entity_manager

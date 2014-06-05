@@ -1,0 +1,19 @@
+connector:
+    name: Batch job import
+    jobs:
+        contact_import:
+            title: acme_demo.jobs.contact_import.title
+            type:  import
+            steps:
+                import_contact:
+                    title:     acme_demo.jobs.contact_import.contact.title
+                    services:
+                        reader:    acme_demo.reader.file.csv
+                        processor: acme_demo.processor.contact
+                        writer:    acme_demo.writer.doctrine
+                import_friends:
+                    title:     acme_demo.jobs.contact_import.friends.title
+                    services:
+                        reader:    acme_demo.reader.file.csv
+                        processor: acme_demo.processor.friend
+                        writer:    acme_demo.writer.doctrine

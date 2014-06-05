@@ -1,0 +1,8 @@
+parameters:
+    acme_demo.doctrine.smart_manager_registry.class:             Acme\DemoBundle\Doctrine\SmartManagerRegistry
+
+services:
+    acme_demo.doctrine.smart_manager_registry:
+        class: %acme_demo.doctrine.smart_manager_registry.class%
+        calls:
+            - [addRegistry, ['@doctrine']]

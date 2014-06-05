@@ -1,0 +1,44 @@
+Acme\DemoBundle\Entity\Contact:
+    type: entity
+    table: demo_contact
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        code:
+            type: string
+            length: 100
+            unique: true
+        label:
+            type: string
+            length: 255
+            nullable: true
+        firstName:
+            type: string
+            length: 255
+            nullable: true
+        lastName:
+            type: string
+            length: 255
+            nullable: true
+        type:
+            type: string
+            length: 255
+            nullable: false
+    manyToMany:
+        friends:
+            targetEntity: Acme\DemoBundle\Entity\Contact
+            joinTable:
+                name: acme_demo_friend
+                joinColumns:
+                    contact_id:
+                        referencedColumnName: id
+                        nullable: true
+                        onDelete: CASCADE
+                inverseJoinColumns:
+                    friend_id:
+                        referencedColumnName: id
+                        nullable: true
+                        onDelete: CASCADE

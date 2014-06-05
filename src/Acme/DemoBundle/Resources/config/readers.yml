@@ -1,0 +1,6 @@
+parameters:
+    acme_demo.reader.file.csv.class:          Acme\DemoBundle\Reader\CsvReader
+
+services:
+    acme_demo.reader.file.csv:
+        class: %acme_demo.reader.file.csv.class%
