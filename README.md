@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Symfony Standard Edition
 ========================
 
@@ -169,3 +170,9 @@ Enjoy!
 [11]: http://symfony.com/doc/2.3/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.3/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/2.3/bundles/SensioGeneratorBundle/index.html
+=======
+batch-bundle-experimentation
+============================
+
+A symfony standard using the akeneo batch bundle to import a self referenced entity
+>>>>>>> 71c76a95e0a36e0cb2f5551eaf2c4602b2116464
